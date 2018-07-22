@@ -38,17 +38,12 @@ sentance_to_analyse = [[tweet.text]for tweet in public_tweets]
 #Make row of tweets
 with open('sentiment.csv', 'w') as csvfile:
     file = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_ALL)
-    
     file.writerow(['Tweet', 'Polarity'])
     file.writerows(sentance_to_analyse)
 
 #perform sentiment analysis on tweets    
 with open('sentiment.csv', 'r') as f:
     rows = csv.reader(f)
-#    for r in rows:
-#        sentence = r[0]
-#        blob = TextBlob(sentence)
-#        print(blob.sentiment)
     sentiment_of_tweet = [["Positive"] if TextBlob(r[0]).sentiment.polarity >= 0 else ["Negative"] for r in rows]
 
 '''
