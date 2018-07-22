@@ -27,3 +27,25 @@ Instead of printing out each tweet, save each Tweet to a CSV file with an associ
 ##Credits
 
 This code is 100% Siraj baby.
+
+--------------------------------------------------------------
+#Challenge Completed 
+
+##Process 
+
+To save the tweets with it polarity in csv:
+
+-Get the public tweets 
+
+-Make a row in csv file with label "Tweets and Polarity"
+
+-Perform the sentiment analysis on tweets and store it in variable
+
+-Csv file does not support write column operation, therefore store the tweets with its polarity in variable
+
+-Zip the collected tweets with its polarity. Zip perform row to column operation
+
+-Write the stored zip into csv
+
+-Done
+
